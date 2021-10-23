@@ -1,0 +1,22 @@
+<p>{{ aplicacao }}, versão {{ versao }}</p>
+
+<pessoa #cmpPessoa nome="Outra pessoa" idade="20"></pessoa>
+
+<p *ngIf="cmpPessoa.nome === 'Outra pessoa'; else pessoaErrada">
+  A propriedade nome é igual
+</p>
+
+<ng-template #pessoaErrada>
+  <p>Esta não é a pessoa certa</p>
+</ng-template>
+
+<p *ngIf="cardapio.length > 0">Cardápio</p>
+<select>
+  <option *ngFor="let prato of cardapio">
+    {{ prato }}
+  </option>
+</select>
+
+<p>Testando pipes</p>
+
+<p>{{ 'Este é o meu texto' | contaStrings }}</p>
